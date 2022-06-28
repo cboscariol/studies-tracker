@@ -1,7 +1,9 @@
+import './style.scss'
+
 
 function Button() {
   return (
-    <button>Button</button>
+    <button className='button'>Button</button>
   )
 }
 
