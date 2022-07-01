@@ -1,4 +1,5 @@
-import style from './Button.module.scss'
+import Item from "./Item";
+import style from "./List.module.scss";
 
 function List() {
   const tasks = [
@@ -11,9 +12,9 @@ function List() {
       time: "01:30:00",
     },
     {
-        title: "TS",
-        time: "00:30:00",
-    }
+      title: "TS",
+      time: "00:30:00",
+    },
   ];
 
   return (
@@ -21,10 +22,7 @@ function List() {
       <h2> Today's studies </h2>
       <ul>
         {tasks.map((task, index) => (
-          <li key={index} className={style.item}>
-            <h3>{task.title}</h3>
-            <span>{task.time}</span>
-          </li>
+          <Item {...task} key={index} /> // spread de task, manda tudo que tem dentro de task como props (time e title)
         ))}
       </ul>
     </aside>
