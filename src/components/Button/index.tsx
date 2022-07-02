@@ -1,13 +1,14 @@
 import style from './Button.module.scss'
 
 type ButtonProps = {
-  text: string
+  text: string,
+  onClick?: any
 }
 
 
  function Button(props: ButtonProps) {
    return (
-     <button className={style.button}>{props.text}</button>
+     <button className={style.button}  onClick={props.onClick}>{props.text}</button>
    )
  }
 

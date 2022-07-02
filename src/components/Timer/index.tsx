@@ -3,7 +3,7 @@ import Clock from "./Clock"
 import style from './Timer.module.scss'
 
 
-function Timer() {
+function Timer(props: any) {
   return (
     <div className={style.timer}>
         <p className={style.title}>Choose a card and star the timer</p>
