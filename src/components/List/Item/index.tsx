@@ -1,4 +1,4 @@
-import style from "../List.module.scss";
+import style from "./Item.module.scss";
 import { ITask } from "../../../types/ITask";
 
 interface ItemProps extends ITask {
