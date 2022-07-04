@@ -22,7 +22,7 @@ function App() {
     <div className={style.AppStyle}>
       <Form setTasks={setTasks} />
       <List tasks={tasks} selectTask={selectTask} />
-      <Timer task={selected} />
+      <Timer selected={selected} />
     </div>
   );
 }

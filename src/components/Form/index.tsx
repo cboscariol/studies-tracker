@@ -50,13 +50,13 @@ function Form(props: any) {
       <div className={style.inputContainer}>
         <label htmlFor="time">Time</label>
         <input
-          type="text"
+          type="time"
           step="1"
           name="time"
           value={values.time}
           onChange={handleChange}
           id="time"
-          min="00:00:00"
+          min="00:00:01"
           max="01:30:00"
           required
         />
