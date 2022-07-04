@@ -7,9 +7,10 @@ import style from "./Timer.module.scss";
 
 interface TimerProps {
   selected: ITask | undefined;
+  finishTask: () => void
 }
 
-function Timer({ selected }: TimerProps) {
+function Timer({ selected, finishTask }: TimerProps) {
   const [time, setTime] = useState<number>();
 
   useEffect(() => {
@@ -24,6 +25,7 @@ function Timer({ selected }: TimerProps) {
         setTime(counter -1);
         return countdown(counter -1)
       }
+      finishTask()
     }, 1000)
   }
 

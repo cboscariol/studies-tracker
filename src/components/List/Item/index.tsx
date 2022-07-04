@@ -8,8 +8,8 @@ interface ItemProps extends ITask {
 function Item({ task, time, selected, completed, id, selectTask }: ItemProps) {
   return (
     <li
-      className={`${style.item} ${selected ? style.selectedItem : ''}`} //conditional classname
-      onClick={() =>
+      className={`${style.item} ${selected ? style.selectedItem : ''} ${completed ? style.completedItem : ''}`} //conditional classname
+      onClick={() => !completed && //execultando função de maneira condicional
         selectTask({
           task,
           time,
@@ -21,6 +21,7 @@ function Item({ task, time, selected, completed, id, selectTask }: ItemProps) {
     >
       <h3>{task}</h3>
       <span>{time}</span>
+      {completed && <span className={style.completed}></span>}
     </li>
   );
 }
