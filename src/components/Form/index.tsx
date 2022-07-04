@@ -50,7 +50,7 @@ function Form(props: any) {
       <div className={style.inputContainer}>
         <label htmlFor="time">Time</label>
         <input
-          type="time"
+          type="text"
           step="1"
           name="time"
           value={values.time}
